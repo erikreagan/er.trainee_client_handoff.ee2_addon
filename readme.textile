@@ -1,0 +1,24 @@
+h1. Train-EE Client Handoff
+
+This is a sample Accessory template for ExpressionEngine 2.x intended to give you an additional tool for your clients once turning over content management to them. [Get full description from Mike]
+
+h2. Requirements & Compatibility
+
+* ExpressionEngine 2.x is required for this add-on
+
+h2. Installation
+
+* Copy the <code>trainee_client_handoff</code> directory to your <code>system/expressionengine/third_party/</code> directory
+* Install the Accessory under Add-ons > Accessories
+* Configure which pages should load the Accessory
+* Configure which member groups should see the Accessory
+
+h2. Customizing
+
+The acc.trainee_client_handoff.php file is commented explaining where and how to customize the Accessory with your own information.
+
+h2. Change Log
+
++*1.0, May 16, 2010*+
+
+* Initial Release
