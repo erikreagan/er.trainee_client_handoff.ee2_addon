@@ -27,7 +27,7 @@ class Trainee_client_handoff_acc
    public   $id             = 'trainee_client_handoff';
    
    // As you update your accessory be sure to update the version number here
-   public   $version        = '1.1';
+   public   $version        = '1.0';
    
    // This is the description that shows up on the Add-ons > Accessories page in the Control Panel
    public   $description    = 'Accessory Template for the client handoff of an EE 2.x project';
@@ -52,7 +52,7 @@ class Trainee_client_handoff_acc
       // If you aren't using any of EE's classes you don't *need* to do this
       // We need it so we can use the view loader in the set_sections() method
       $this->EE =& get_instance();
-      
+
    }
 
 
@@ -67,22 +67,40 @@ class Trainee_client_handoff_acc
    {
       
       // First let's add some custom styles to the CP header. We'll use the CSS ID defined above to just target *this* accessory
+      // We'll also add some simple jQuery to spice up our logo a bit. Completely unnecessary of course :)
+      
       $this->EE->cp->add_to_head('
+      
       <style type="text/css" media="screen">
-      #'.$this->id.' .accessorySection { width: 25%; }
-      #'.$this->id.' .accessorySection ul.top { display: block; width: auto; overflow: auto; border-bottom: 1px solid #39454B; padding-bottom: 15px; margin-bottom: 15px; }
-      #'.$this->id.' .accessorySection li { width: 50%; float: left; }
+         #'.$this->id.' .accessorySection { width: 350px; }
+         #'.$this->id.' .accessorySection ul.top { display: block; width: auto; overflow: auto; border-bottom: 1px solid #39454B; padding-bottom: 15px; margin-bottom: 15px; }
+         #'.$this->id.' .accessorySection li { width: 50%; float: left; }
+         #'.$this->id.' .accessorySection li a { display: block; }
       </style>
+      
+      <script type="text/javascript">
+         $(function(){
+            $("#'.$this->id.' .accessorySection img").css("opacity",.5).hover(
+               function(){
+                  $(this).stop().animate({opacity:1},300);
+               },
+               function(){
+                  $(this).stop().animate({opacity:.5},200);
+               }
+            );
+         });
+      </script>
+      
       ');
       
       
       // This section shows how you can load a view file for your content
       // The first parameter, "quick_links", is the view file (located under views/quick_links.php)
       // The second parameter is your data variable passed to the view file. In our case we aren't passing any to this view
-      // The third parameter tells CodeIgniter not to display the view, just to load it into the array $this->sections
+      // The third parameter tells CodeIgniter not to display the view, just to load it as data (then EE displays it at the right time)
       $this->sections['Client Links'] = $this->EE->load->view('quick_links',NULL,TRUE);
       
-      
+      $this->sections['Video: How to Add an Image'] = $this->EE->load->view('video_embed',NULL,TRUE);
    
       
       // This section shows how you can hard-code in your content
