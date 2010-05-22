@@ -15,7 +15,7 @@ h2. Installation
 
 h2. Customizing
 
-The acc.trainee_client_handoff.php file is commented explaining where and how to customize the Accessory with your own information.
+The acc.trainee_client_handoff.php file is commented explaining where and how to customize the Accessory with your own information. Remember to always test locally before installing on a client's site.
 
 h2. Change Log
 
