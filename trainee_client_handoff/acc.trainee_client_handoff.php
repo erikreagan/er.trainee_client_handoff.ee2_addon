@@ -11,6 +11,7 @@
  * @author Erik Reagan http://erikreagan.com
  * @copyright Copyright (c) 2010 Erik Reagan
  * @see http://erikreagan.com/projects/train-ee-client-handoff/
+ * @see http://expressionengine.com/public_beta/docs/development/accessories.html
  * @license http://creativecommons.org/licenses/by-sa/3.0/ Attribution-Share Alike 3.0 Unported
  */
 
@@ -54,7 +55,8 @@ class Trainee_client_handoff_acc
       $this->EE =& get_instance();
 
    }
-
+   // END function Trainee_client_handoff_acc()
+   
 
 
    /**
@@ -69,6 +71,9 @@ class Trainee_client_handoff_acc
       // First let's add some custom styles to the CP header. We'll use the CSS ID defined above to just target *this* accessory
       // We'll also add some simple jQuery to spice up our logo a bit. Completely unnecessary of course :)
       
+      /**
+       * @see http://expressionengine.com/public_beta/docs/development/usage/cp.html#add_to_head
+       */
       $this->EE->cp->add_to_head('
       
       <style type="text/css" media="screen">
@@ -98,8 +103,16 @@ class Trainee_client_handoff_acc
       // The first parameter, "quick_links", is the view file (located under views/quick_links.php)
       // The second parameter is your data variable passed to the view file. In our case we aren't passing any to this view
       // The third parameter tells CodeIgniter not to display the view, just to load it as data (then EE displays it at the right time)
+      // 
+      // I prefer to load view files when the data (HTML) is more than just a few lines. It keeps the
+      // accessory file cleaner and easier to read. It also makes it easier to modify later.
+      
+      /**
+       * @see http://expressionengine.com/public_beta/docs/development/modules.html#view_files
+       */
       $this->sections['Client Links'] = $this->EE->load->view('quick_links',NULL,TRUE);
       
+      // Here we'll load a screencast teaching our client something. (also a view file)
       $this->sections['Video: How to Add an Image'] = $this->EE->load->view('video_embed',NULL,TRUE);
    
       
@@ -107,14 +120,18 @@ class Trainee_client_handoff_acc
       // Notice taht the section doesn't really need a title/heading
       // We also mask the url so the CP URL doesn't show up in any outside website tracking logs
       // See http://expressionengine.com/public_beta/docs/development/usage/cp.html#masked_url
+      // 
+      // When just adding 1 or 2 lines of data (HTML), I'll just add it straight in the accessory file rather
+      // than loading a separate view file. A separate view would seem like overkill in this case.
       $this->sections[''] = '<a href="'.$this->EE->cp->masked_url('#').'"><img src="http://focuslabllc.com/images/vendor_logo.jpg" width="150" height="150" alt="Vendor Logo" title="You totally want to click me!" /></a>';
       
 
    }
-   
+   // END function set_sections()
    
 }
-// END class
+// END class Trainee_client_handoff_acc
+
 
 /* End of file acc.trainee_client_handoff.php */
 /* Location: ./system/expressionengine/third_party/trainee_client_handoff/acc.trainee_client_handoff.php */

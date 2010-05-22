@@ -19,6 +19,6 @@ The acc.trainee_client_handoff.php file is commented explaining where and how to
 
 h2. Change Log
 
-+*1.0, May 16, 2010*+
++*1.0, June 2, 2010*+
 
 * Initial Release
