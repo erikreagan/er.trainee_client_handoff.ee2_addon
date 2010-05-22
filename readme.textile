@@ -1,6 +1,6 @@
 h1. Train-EE Client Handoff
 
-This is a sample Accessory template for ExpressionEngine 2.x intended to give you an additional tool for your clients once turning over content management to them. [Get full description from Mike]
+This is a sample Accessory template for ExpressionEngine 2.x. The goal in creating this was to make easier for non-PHP programmers to create custom Accessories to include with your client projects. Use this Accessory as a starting point, add your own links, your own screencasts, your own logo - whatever it takes to help your clients be more successful in adopting your finely-crafted EE site and managing their content.
 
 h2. Requirements & Compatibility
 

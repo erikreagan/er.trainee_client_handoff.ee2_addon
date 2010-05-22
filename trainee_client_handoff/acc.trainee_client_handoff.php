@@ -11,8 +11,9 @@
  * @author Erik Reagan http://erikreagan.com
  * @copyright Copyright (c) 2010 Erik Reagan
  * @see http://erikreagan.com/projects/train-ee-client-handoff/
- * @see http://expressionengine.com/public_beta/docs/development/accessories.html
  * @license http://creativecommons.org/licenses/by-sa/3.0/ Attribution-Share Alike 3.0 Unported
+ *
+ * @see http://expressionengine.com/public_beta/docs/development/accessories.html
  */
 
 
