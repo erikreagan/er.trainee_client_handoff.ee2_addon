@@ -15,7 +15,23 @@ h2. Installation
 
 h2. Customizing
 
-The acc.trainee_client_handoff.php file is commented explaining where and how to customize the Accessory with your own information. Remember to always test locally before installing on a client's site.
+* To change the name of the tab edit line 26 of the <code>acc.trainee_client_handoff.php</code> file.
+* To change the CSS ID of your accessory tab edit line 29 of the <code>acc.trainee_client_handoff.php</code> file.
+* The <code>acc.trainee_client_handoff.php</code> file is commented explaining where and how to customize the Accessory with your own information. Remember to always test locally before installing on a client's site.
+
+h2. License
+
+This add-on is licensed under +Creative Commons Attribution-Share Alike 3.0 Unported+. This means that you can:
+
+* copy, distribute and transmit the work
+* adapt the work
+
+Under the following conditions:
+
+* *Attribution* - You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).
+* *Share Alike* — If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
+
+For more details read through "the overview of the license":http://creativecommons.org/licenses/by-sa/3.0/ or read through "the full legal jargon":http://creativecommons.org/licenses/by-sa/3.0/legalcode.
 
 h2. Change Log
 

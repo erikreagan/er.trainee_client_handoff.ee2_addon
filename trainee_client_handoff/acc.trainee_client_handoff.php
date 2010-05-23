@@ -23,7 +23,7 @@ class Trainee_client_handoff_acc
    
    // Give your accessory whatever name you want here. It will be the text on the Accessory Tab
    // Note that it does not change the order of the Accessory tabs
-   public   $name           = 'Train-ee Client Handoff';
+   public   $name           = 'Vendor Name Portal';
 
    // This is the CSS ID name you can use to do any specific styling in the CP if you add custom stylesheets
    public   $id             = 'trainee_client_handoff';
@@ -32,7 +32,7 @@ class Trainee_client_handoff_acc
    public   $version        = '1.0';
    
    // This is the description that shows up on the Add-ons > Accessories page in the Control Panel
-   public   $description    = 'Accessory Template for the client handoff of an EE 2.x project';
+   public   $description    = 'Train-ee Accessory Template for the client handoff of an EE 2.x project';
    
    // This is just to create the $sections array used further down in the code
    public   $sections       = array();
