@@ -7,10 +7,11 @@
  * /system/expressionengine/third_party/trainee_client_handoff/ folder in your ExpressionEngine installation.
  *
  * @package TraineeClientHandoff
- * @version 1.0
+ * @version 1.0.0
  * @author Erik Reagan http://erikreagan.com
  * @copyright Copyright (c) 2010 Erik Reagan
  * @see http://erikreagan.com/projects/train-ee-client-handoff/
+ * @see http://www.train-ee.com/courseware/free-tutorials/comments/client-handoff-resources/
  * @license http://creativecommons.org/licenses/by-sa/3.0/ Attribution-Share Alike 3.0 Unported
  *
  * @see http://expressionengine.com/public_beta/docs/development/accessories.html
@@ -29,10 +30,10 @@ class Trainee_client_handoff_acc
    public   $id             = 'trainee_client_handoff';
    
    // As you update your accessory be sure to update the version number here
-   public   $version        = '1.0';
+   public   $version        = '1.0.0';
    
    // This is the description that shows up on the Add-ons > Accessories page in the Control Panel
-   public   $description    = 'Train-ee Accessory Template for the client handoff of an EE 2.x project';
+   public   $description    = 'Train-ee Accessory template for the client handoff of an EE 2.x project';
    
    // This is just to create the $sections array used further down in the code
    public   $sections       = array();
@@ -118,7 +119,7 @@ class Trainee_client_handoff_acc
    
       
       // This section shows how you can hard-code in your content
-      // Notice taht the section doesn't really need a title/heading
+      // Notice that the section doesn't really need a title/heading
       // We also mask the url so the CP URL doesn't show up in any outside website tracking logs
       // See http://expressionengine.com/public_beta/docs/development/usage/cp.html#masked_url
       // 

@@ -35,6 +35,6 @@ For more details read through "the overview of the license":http://creativecommo
 
 h2. Change Log
 
-+*1.0, June 2, 2010*+
++*1.0.0, June 2, 2010*+
 
 * Initial Release
